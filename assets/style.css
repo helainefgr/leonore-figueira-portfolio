@@ -337,3 +337,6 @@ a:hover .more .arrow, .more:hover .arrow { transform: translateX(6px); }
 .tone-beige .p-text .body p { color: #1f1c1a; }
 .gallery figure.showcase img[src*="serre-chaise"] { height: min(62vh, 600px); width: auto; max-height: none; }
 @media (max-width: 760px) { .gallery figure.showcase img[src*="serre-chaise"] { height: auto; width: 82%; } }
+
+/* flèche de lien externe (dessinée, identique sur ordinateur et téléphone) */
+.ext { display: inline-block; width: .62em; height: .62em; margin-left: .3em; vertical-align: .08em; }
