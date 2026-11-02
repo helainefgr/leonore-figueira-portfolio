@@ -1,0 +1,93 @@
+/*
+Theme Name: Léonore Portfolio
+Description: Thème du portfolio d'architecture de Léonore Figueira, reproduisant à l'identique la mise en page de l'ancien site Wix. À l'activation, le thème crée automatiquement les pages, le menu et la page d'accueil.
+Version: 1.0
+Author: Léonore Figueira
+Requires at least: 6.0
+Requires PHP: 7.4
+Text Domain: leonore-portfolio
+*/
+
+/* Polices : Helvetica (light / bold), comme sur Wix. Repli sur Arial. */
+@font-face { font-family: "lf-light"; font-weight: 300; src: local("HelveticaNeue-Light"), local("Helvetica Neue Light"), local("Helvetica-Light"), local("Helvetica Light"); }
+@font-face { font-family: "lf-bold"; font-weight: 700; src: local("Helvetica-Bold"), local("HelveticaNeue-Bold"), local("Helvetica Bold"), local("Helvetica Neue Bold"); }
+:root {
+	--lf-l: "lf-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--lf-b: "lf-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--lf-ink: #060e25;
+	--lf-grey: #e8e8e8;
+}
+
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--lf-l); font-weight: 300; color: #000; background: var(--lf-grey); -webkit-font-smoothing: antialiased; }
+.lf-page { overflow-x: clip; }
+a { color: inherit; }
+img { max-width: none; }
+
+/* ---------- En-tête ---------- */
+.lf-header { position: relative; z-index: 100; height: 72px; background: var(--lf-grey); border-bottom: 3px solid var(--lf-ink); }
+.lf-hstage { position: relative; width: 980px; height: 100%; margin: 0 auto; }
+.lf-logo { position: absolute; left: max(-151px, calc((980px - 100vw) / 2 + 8px)); top: 5px; width: 63px; height: 63px; }
+.lf-logo img { width: 63px; height: 63px; display: block; }
+.lf-title { position: absolute; left: 28px; top: 19px; font-family: var(--lf-b); font-weight: 700; font-size: 24px; color: #000; text-decoration: none; white-space: nowrap; }
+.lf-nav { position: absolute; left: 418px; top: 7px; width: 610px; }
+.lf-nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.lf-nav li { flex: 1; padding: 0 6px; }
+.lf-nav a { display: block; border-top: 4px solid transparent; line-height: 48px; text-align: center; font-family: var(--lf-l); font-weight: 300; font-size: 12px; color: var(--lf-ink); text-decoration: none; text-transform: uppercase; }
+.lf-nav a:hover { opacity: .6; }
+.lf-nav .current-menu-item:not(.lf-contact) > a, .lf-nav .current_page_item:not(.lf-contact) > a { border-top-color: #000; }
+
+/* ---------- Sections (grille Wix de 980 px) ---------- */
+.lf-sec { position: relative; background-size: cover; background-position: center; }
+.lf-stage { position: relative; width: 980px; height: 100%; margin: 0 auto; }
+.lf-stage > *, .lf-box > * { position: absolute; box-sizing: border-box; }
+.lf-img { display: block; overflow: hidden; }
+.lf-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+a.lf-img:hover img { opacity: .92; }
+.lf-text h1, .lf-text h2, .lf-text h3, .lf-text h4, .lf-text h5, .lf-text h6, .lf-text p, .lf-text ul, .lf-text ol { margin: 0; font-weight: inherit; }
+.lf-text a { color: inherit; text-decoration: none; }
+@media (min-width: 1001px) { .lf-1l { white-space: nowrap; } }
+.lf-box { display: block; box-sizing: border-box; color: inherit; text-decoration: none; }
+.lf-line { height: 0; }
+.lf-arrow { display: block; color: #000; }
+.lf-arrow svg { display: block; width: 100%; height: 100%; transform: scaleX(-1); fill: currentColor; }
+.lf-btn { display: flex; align-items: center; justify-content: center; text-decoration: none; }
+.lf-btn:hover { opacity: .6; }
+.lf-social { display: flex; gap: 20px; }
+.lf-social img { display: block; width: 20px; height: 20px; }
+
+/* Pages ajoutées plus tard dans WordPress (texte simple) */
+.lf-plain { max-width: 760px; margin: 0 auto; padding: 60px 20px; font-size: 15px; line-height: 1.6; }
+.lf-plain img { max-width: 100%; height: auto; }
+
+/* ---------- Pied de page ---------- */
+.lf-footer { position: relative; z-index: 50; padding: 18px 20px 12px; min-height: 19px; }
+
+/* ---------- Mobile et tablette ---------- */
+@media (max-width: 1000px) {
+	.lf-header { height: auto; }
+	.lf-hstage { width: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; padding: 10px 16px 0; }
+	.lf-logo, .lf-title, .lf-nav { position: static; }
+	.lf-logo, .lf-logo img { width: 44px; height: 44px; }
+	.lf-title { font-size: 19px; }
+	.lf-nav { width: 100%; }
+	.lf-nav li { padding: 0; }
+	.lf-nav a { line-height: 40px; }
+
+	.lf-sec { height: auto !important; padding: 44px 20px 24px; }
+	.lf-sec.lf-has-bg { min-height: 62vh; display: flex; align-items: center; justify-content: center; box-sizing: border-box; }
+	.lf-sec[style*="--m-bg"] { background-color: var(--m-bg) !important; }
+	.lf-stage { width: 100%; max-width: 640px; }
+	.lf-stage > *, .lf-box > * { position: relative !important; left: auto !important; top: auto !important; width: auto !important; height: auto !important; margin: 0 0 20px; }
+	.lf-img img { height: auto; }
+	.lf-flat { display: none !important; }
+	.lf-box { padding: 28px 24px; }
+	.lf-box > :last-child { margin-bottom: 0; }
+	.lf-line { width: 60px !important; }
+	.lf-arrow { width: 69px !important; height: 7px !important; }
+	.lf-btn { display: inline-flex !important; padding: 8px 0; margin-right: 28px !important; }
+	.lf-social { height: 20px !important; }
+	.lf-xxl :is(h1, h2, h3, h4, h5, h6, p, span) { font-size: clamp(40px, 14vw, 87px) !important; letter-spacing: 0 !important; }
+	.lf-xl :is(h1, h2, h3, h4, h5, h6, p, span) { font-size: clamp(24px, 7.5vw, 38px) !important; }
+	.lf-text :is(p, span, li)[style*="justify"] { text-align: left !important; }
+}
