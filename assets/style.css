@@ -340,3 +340,7 @@ a:hover .more .arrow, .more:hover .arrow { transform: translateX(6px); }
 
 /* flèche de lien externe (dessinée, identique sur ordinateur et téléphone) */
 .ext { display: inline-block; width: .62em; height: .62em; margin-left: .3em; vertical-align: .08em; }
+
+/* planche détourée posée directement sur la page */
+.gallery figure.showcase.clear { background: none; padding-top: clamp(12px, 3vw, 40px); }
+.gallery figure.showcase.clear img { max-height: 82vh; filter: drop-shadow(0 18px 26px rgba(0, 0, 0, .12)); }
