@@ -353,7 +353,7 @@ a:hover .more .arrow, .more:hover .arrow { transform: translateX(6px); }
 
 /* autres créations : petites vignettes */
 .minis-intro { margin: 22px 0 28px; color: var(--ink-2); max-width: 46ch; }
-.minis { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(14px, 2vw, 26px); }
+.minis { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(14px, 2vw, 26px); }
 .mini { margin: 0; }
 .mini img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; cursor: zoom-in; filter: grayscale(.15); transition: filter .4s, opacity .3s; }
 .mini img:hover { filter: none; opacity: .92; }
@@ -362,7 +362,7 @@ a:hover .more .arrow, .more:hover .arrow { transform: translateX(6px); }
 @media (max-width: 1000px) { .minis { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 600px) { .minis { grid-template-columns: 1fr 1fr; } }
 
-.mini.fit img { object-fit: contain; background: var(--paper-2); padding: 10px; }
+.mini.fit img { object-fit: contain; background: var(--paper-2); padding: 18px; box-sizing: border-box; }
 .gallery .quad { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 2vw, 28px); }
 .gallery .quad figure { margin: 0; }
 .gallery figure.acc figcaption { position: absolute; }
