@@ -355,7 +355,7 @@ a:hover .more .arrow, .more:hover .arrow { transform: translateX(6px); }
 .minis-intro { margin: 22px 0 28px; color: var(--ink-2); max-width: 46ch; }
 .minis { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2vw, 26px); }
 .mini { margin: 0; }
-.mini img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; cursor: zoom-in; filter: grayscale(.15); transition: filter .4s, opacity .3s; }
+.mini img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; cursor: zoom-in; filter: grayscale(.15); transition: filter .4s, opacity .3s; }
 .mini img:hover { filter: none; opacity: .92; }
 .mini figcaption { padding-top: 10px; font-size: 13px; line-height: 1.45; color: var(--ink-2); }
 .mini figcaption .label { margin-bottom: 4px; color: var(--ink); }
