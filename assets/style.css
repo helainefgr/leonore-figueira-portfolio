@@ -351,19 +351,18 @@ a:hover .more .arrow, .more:hover .arrow { transform: translateX(6px); }
 	.brand-sub { font-size: 9px; letter-spacing: .08em; }
 }
 
-/* autres créations : petites vignettes */
-.minis-intro { margin: 22px 0 28px; color: var(--ink-2); max-width: 46ch; }
-.minis { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(14px, 2vw, 26px); }
-.mini { margin: 0; }
-.mini img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; cursor: zoom-in; filter: grayscale(.15); transition: filter .4s, opacity .3s; }
-.mini img:hover { filter: none; opacity: .92; }
-.mini figcaption { padding-top: 10px; font-size: 13px; line-height: 1.45; color: var(--ink-2); }
-.mini figcaption .label { margin-bottom: 4px; color: var(--ink); }
-@media (max-width: 1000px) { .minis { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 600px) { .minis { grid-template-columns: 1fr 1fr; } }
-
-.mini.fit img { object-fit: contain; background: var(--paper-2); padding: 18px; box-sizing: border-box; }
-.gallery .quad { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 2vw, 28px); }
-.gallery .quad figure { margin: 0; }
-.gallery figure.acc figcaption { position: absolute; }
-@media (max-width: 760px) { .gallery .c6.quad, .gallery .c6.acc { grid-column: span 12; } }
+/* autres créations : deux rangées équilibrées, images entières */
+.minis-intro { margin: 22px 0 32px; color: var(--ink-2); max-width: 52ch; }
+.crea { display: flex; flex-direction: column; gap: clamp(28px, 4vw, 48px); }
+.crea-row { display: flex; gap: clamp(14px, 2.2vw, 30px); align-items: flex-start; }
+.crea figure { margin: 0; flex: var(--r) 1 0; min-width: 0; }
+.crea img { width: 100%; height: auto; display: block; cursor: zoom-in; transition: opacity .3s; }
+.crea img:hover { opacity: .9; }
+.crea figcaption { padding-top: 10px; font-size: 13px; line-height: 1.45; color: var(--ink-2); }
+.crea figcaption .label { margin-bottom: 4px; color: var(--ink); }
+@media (max-width: 760px) {
+	.crea { gap: 22px; }
+	.crea-row { flex-wrap: wrap; gap: 22px 14px; }
+	.crea figure { flex: 0 0 calc(50% - 7px); }
+	.crea-row figure:last-child:nth-child(odd) { flex-basis: 100%; }
+}
