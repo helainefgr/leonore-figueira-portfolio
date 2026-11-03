@@ -350,3 +350,12 @@ a:hover .more .arrow, .more:hover .arrow { transform: translateX(6px); }
 	.brand img { width: 30px; height: 30px; }
 	.brand-sub { font-size: 9px; letter-spacing: .08em; }
 }
+
+/* rangée d’images de même hauteur (couture) */
+.jrow { display: flex; gap: clamp(14px, 2vw, 28px); align-items: flex-start; }
+.jrow figure { margin: 0; min-width: 0; }
+.jrow img { width: 100%; height: auto; cursor: zoom-in; }
+.jrow figcaption { padding-top: 10px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+@media (max-width: 760px) { .jrow { flex-direction: column; gap: 26px; } .jrow figure { flex: none !important; width: 100%; } }
+/* page de carnet : légère ombre pour détacher la feuille */
+.p-text .side.sheet img { box-shadow: 0 14px 34px rgba(0, 0, 0, .12); }
