@@ -351,11 +351,12 @@ a:hover .more .arrow, .more:hover .arrow { transform: translateX(6px); }
 	.brand-sub { font-size: 9px; letter-spacing: .08em; }
 }
 
-/* rangée d’images de même hauteur (couture) */
-.jrow { display: flex; gap: clamp(14px, 2vw, 28px); align-items: flex-start; }
-.jrow figure { margin: 0; min-width: 0; }
-.jrow img { width: 100%; height: auto; cursor: zoom-in; }
-.jrow figcaption { padding-top: 10px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
-@media (max-width: 760px) { .jrow { flex-direction: column; gap: 26px; } .jrow figure { flex: none !important; width: 100%; } }
-/* page de carnet : légère ombre pour détacher la feuille */
-.p-text .side.sheet img { box-shadow: 0 14px 34px rgba(0, 0, 0, .12); }
+/* autres créations : petites vignettes */
+.minis-intro { margin: 22px 0 28px; color: var(--ink-2); max-width: 46ch; }
+.minis { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2vw, 26px); }
+.mini { margin: 0; }
+.mini img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; cursor: zoom-in; filter: grayscale(.15); transition: filter .4s, opacity .3s; }
+.mini img:hover { filter: none; opacity: .92; }
+.mini figcaption { padding-top: 10px; font-size: 13px; line-height: 1.45; color: var(--ink-2); }
+.mini figcaption .label { margin-bottom: 4px; color: var(--ink); }
+@media (max-width: 760px) { .minis { grid-template-columns: 1fr 1fr; } }

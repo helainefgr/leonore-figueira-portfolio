@@ -37,7 +37,7 @@
 	}
 
 	// Visionneuse plein écran pour les galeries
-	var imgs = Array.prototype.slice.call(document.querySelectorAll('.p-hero img, .p-text .side img, .gallery img, .jrow img'));
+	var imgs = Array.prototype.slice.call(document.querySelectorAll('.p-hero img, .p-text .side img, .gallery img, .mini img'));
 	if (!imgs.length) return;
 	var box = document.createElement('div');
 	box.className = 'lightbox';
